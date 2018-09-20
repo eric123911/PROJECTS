@@ -1,7 +1,12 @@
 NAME	= libft.a
 FLAGS = -Wall -Werror -Wextra
 CFLAGS	= $(FLAGS) -Iincludes -c
-FILES	= $(shell find ./print ./strings -name "*.c")
+FILES	= $(shell find 	./LibMem \
+						./LibNumbers \
+						./LibPrint \
+						./LibStrings \
+						./LibUtil \
+-name "*.c")
 
 
 all: build $(NAME)
