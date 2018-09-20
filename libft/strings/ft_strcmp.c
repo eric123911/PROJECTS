@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_putstr.c                                      .::    .:/ .      .::   */
+/*   ft_strcmp.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/20 14:48:05 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/20 14:49:04 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/09/20 14:50:04 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/09/20 14:50:05 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-
-#include "../includes/libft.h"
-
-void	ft_putstr(char *str)
+int		ft_strcmp(char *s1, char *s2)
 {
-  write(1, str, ft_strlen(str));
+	while (*s1 == *s2)
+    {
+      s1++;
+      s2++;
+    }
+  return (*s1 - *s2);
 }

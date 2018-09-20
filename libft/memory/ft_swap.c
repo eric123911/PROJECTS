@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_putstr.c                                      .::    .:/ .      .::   */
+/*   ft_swap.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: eschnell <eschnell@le-101.fr>              +:+   +:    +:    +:+     */
+/*   By: raging <eschnell@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/20 14:48:05 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/20 14:49:04 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/09/20 14:26:49 by raging       #+#   ##    ##    #+#       */
+/*   Updated: 2018/09/20 14:45:20 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-
-#include "../includes/libft.h"
-
-void	ft_putstr(char *str)
+void	ft_swap(int *a, int *b)
 {
-  write(1, str, ft_strlen(str));
+	int	c;
+
+	c = *a;
+	*a = *b;
+	*b = c;
 }
