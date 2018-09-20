@@ -21,14 +21,14 @@
 [] strnstr
 [✓] strcmp
 [] strncmp
-[] atoi
-[] isalpha
-[] isdigit
-[] isalnum
-[] isascii
-[] isprint
-[] toupper
-[] tolower
+[✓] atoi
+[✓] isalpha
+[✓] isdigit
+[✓] isalnum
+[✓] isascii
+[✓] isprint
+[✓] toupper
+[✓] tolower
 
 # Part II
 [] ft_memalloc
@@ -50,7 +50,7 @@
 [✓] ft_putchar
 [✓] ft_putstr
 [] ft_putendl
-[] ft_putnbr
+[✓] ft_putnbr
 [] ft_putchar_fd
 [] ft_putstr_fd
 [] ft_putendl_fd
