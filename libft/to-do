@@ -2,14 +2,14 @@
 
 # Part I
 [] memset
-[] bzero
+[✓] bzero
 [] memcpy
 [] memccpy
 [] memmove
 [] memchr
 [] memcmp
 [✓] strlen
-[] strdup
+[✓] strdup
 [] strcpy
 [] strncpy
 [] strcat
@@ -49,7 +49,7 @@
 [] ft_itoa
 [✓] ft_putchar
 [✓] ft_putstr
-[] ft_putendl
+[✓] ft_putendl
 [✓] ft_putnbr
 [] ft_putchar_fd
 [] ft_putstr_fd

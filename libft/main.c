@@ -19,6 +19,10 @@ int	main(int ac, char **av)
 	ft_putstr("\nav[1][0] isprint: "), ft_putnbr(ft_isprint(_AV_ATOI));
 	ft_putstr("\nav[1][0] isascii: "), ft_putnbr(ft_isascii(_AV_ATOI));
 
+	ft_putstr("\n==========================\n\n\n");
+	const char str[] = "teste de putain ca marchait pas ce test avec les pointeurs è.é\n";
+	ft_putstr("strdup test: "), ft_putstr(ft_strdup(str));
+	ft_putendl("test sans newline..");
 	// Just to suppress [-Werror=unused-parameter]
 	av[0] = "";
 	return (0);
