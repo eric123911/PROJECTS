@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                          LE - /            */
+/*                                                              /             */
+/*   libft.h                                          .::    .:/ .      .::   */
+/*                                                 +:+:+   +:    +:  +:+:+    */
+/*   By: eschnell <eschnell@le-101.fr>              +:+   +:    +:    +:+     */
+/*                                                 #+#   #+    #+    #+#      */
+/*   Created: 2018/09/21 17:25:54 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/09/21 17:26:10 by eschnell    ###    #+. /#+    ###.fr     */
+/*                                                         /                  */
+/*                                                        /                   */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -14,6 +27,7 @@ typedef struct		s_list
 }					t_list;
 
 // LibMEM PROTOTYPES
+void	*ft_memset(void *s, int c, size_t n);
 void	ft_swap(int *a, int *b);
 // LibNUMBERS PROTOTYPES
 int		ft_atoi(char *str);

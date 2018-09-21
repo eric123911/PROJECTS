@@ -1,7 +1,7 @@
 ## LibFt Checklist Progress
 
 # Part I
-[] memset
+[✓] memset
 [✓] bzero
 [] memcpy
 [] memccpy
