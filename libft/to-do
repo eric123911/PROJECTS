@@ -20,7 +20,7 @@
 [] strstr
 [] strnstr
 [✓] strcmp
-[] strncmp
+[✓] strncmp
 [✓] atoi
 [✓] isalpha
 [✓] isdigit

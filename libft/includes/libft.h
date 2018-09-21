@@ -25,6 +25,7 @@ void	ft_putstr(char *str);
 // LibSTRINGS PROTOYPES
 void	ft_bzero(void *s, size_t n);
 int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strdup(const char *s);
 int		ft_strlen(char *str);
 int		ft_toupper(int c);
