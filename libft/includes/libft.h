@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 17:25:54 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/21 17:26:10 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/09/22 18:29:50 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -27,6 +27,11 @@ typedef struct		s_list
 }					t_list;
 
 // LibMEM PROTOTYPES
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_swap(int *a, int *b);
 // LibNUMBERS PROTOTYPES
