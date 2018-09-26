@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 17:25:54 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/22 18:29:50 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/09/26 20:56:22 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -44,9 +44,11 @@ void	ft_putstr(char *str);
 // LibSTRINGS PROTOYPES
 void	ft_bzero(void *s, size_t n);
 int		ft_strcmp(const char *s1, const char *s2);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strcpy(char *dest, char *src);
 char	*ft_strdup(const char *s);
 int		ft_strlen(char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strncpy(char *dest, char *src, size_t n);
 int		ft_toupper(int c);
 int		ft_toupper(int c);
 // LibUTIL PROTOTYPES

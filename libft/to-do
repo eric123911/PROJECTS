@@ -10,8 +10,8 @@
 ✓[] memcmp
 [✓] strlen
 [✓] strdup
-[] strcpy
-[] strncpy
+[✓] strcpy
+[✓] strncpy
 [] strcat
 [] strncat
 [] strlcat
@@ -28,7 +28,7 @@
 [✓] isascii
 [✓] isprint
 [✓] toupper
-[✓] tolower
+[] tolower
 
 # Part II
 [] ft_memalloc
