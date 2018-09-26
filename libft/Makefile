@@ -35,5 +35,6 @@ re: fclean all
 test: re
 	gcc -o test $(FLAGS) -Iincludes main.c $(NAME)
 	@echo -e "\033[32mMAIN TEST COMPILED\033[0m"
+	@echo -e "\n\n\n"
 
 .PHONY: clean fclean all re
