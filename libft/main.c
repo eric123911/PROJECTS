@@ -18,11 +18,15 @@ int	main(int ac, char **av)
 	ft_putnbr(ft_atoi("    -42   #@'è_ç")), ft_putendl("");
 	ft_putendl("Hello world !");
 	ft_putendl("==========================");
-	ft_putstr("av[1][0] isalnum: "), ft_putnbr(ft_isalnum(_AV_ATOI));
-	ft_putstr("\nav[1][0] isalpha: "), ft_putnbr(ft_isalpha(_AV_ATOI));
-	ft_putstr("\nav[1][0] isdigit: "), ft_putnbr(ft_isdigit(_AV_ATOI));
-	ft_putstr("\nav[1][0] isprint: "), ft_putnbr(ft_isprint(_AV_ATOI));
-	ft_putstr("\nav[1][0] isascii: "), ft_putnbr(ft_isascii(_AV_ATOI));
+	ft_putstr(av[1]), ft_putstr(" isalnum: "), ft_putnbr(ft_isalnum(_AV_ATOI));
+	ft_putendl("");
+	ft_putstr(av[1]), ft_putstr(" isalpha: "), ft_putnbr(ft_isalpha(_AV_ATOI));
+	ft_putendl("");
+	ft_putstr(av[1]), ft_putstr(" isdigit: "), ft_putnbr(ft_isdigit(_AV_ATOI));
+	ft_putendl("");
+	ft_putstr(av[1]), ft_putstr(" isprint: "), ft_putnbr(ft_isprint(_AV_ATOI));
+	ft_putendl("");
+	ft_putstr(av[1]), ft_putstr(" isascii: "), ft_putnbr(ft_isascii(_AV_ATOI));
 
 	ft_putendl("\n==========================");
 	char *s1 = "RIPerino";
