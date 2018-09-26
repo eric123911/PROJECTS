@@ -42,10 +42,18 @@ int	main(int ac, char **av)
 	char s3[27] = "abcdefghijklmnopqrstuvwxyz", *s4;
 	s4 = malloc(4*sizeof(char));
 	ft_memcpy(s4, s3, 5);
+	// devrait afficher abcde (les 5 premiers chars dans s3)
 	ft_putstr("memcpy test: "), ft_putendl(s4);
 
 	ft_putendl("==========================");
-	ft_putnbr(ft_memcmp("azb", "aa", 2));
+	// z - a en ascii == 25
+	ft_putnbr(ft_memcmp("azb", "aa", 2*sizeof(char)));
+
+	ft_putendl("\n==========================");
+	char s5[50] = "ok.", s6[2];
+	// devrait afficher 2 fois "ok.\n"
+	ft_strcpy(s6, s5), ft_putendl(s6);
+	ft_strncpy(s6, s5, 4), ft_putendl(s6);
 
 	// Just to suppress [-Werror=unused-parameter]
 	av[0] = "";
