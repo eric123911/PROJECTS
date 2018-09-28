@@ -3,17 +3,17 @@
 # Part I
 [✓] memset
 [✓] bzero
-✓[] memcpy
-✓[] memccpy
-✓[] memmove
-✓[] memchr
-✓[] memcmp
+[✓] memcpy
+[✓] memccpy
+[✓] memmove
+[✓] memchr
+[✓] memcmp
 [✓] strlen
 [✓] strdup
 [✓] strcpy
 [✓] strncpy
-[] strcat
-[] strncat
+[✓] strcat
+✓[] strncat
 [] strlcat
 [] strchr
 [] strrchr

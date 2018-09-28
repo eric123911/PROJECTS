@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   libft.h                                          .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: eschnell <eschnell@le-101.fr>              +:+   +:    +:    +:+     */
+/*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 17:25:54 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/26 20:56:22 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/09/28 17:09:04 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -43,13 +43,15 @@ void	ft_putendl(char const *s);
 void	ft_putstr(char *str);
 // LibSTRINGS PROTOYPES
 void	ft_bzero(void *s, size_t n);
+char	*ft_strcat(char *dest, char *src);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strdup(const char *s);
 int		ft_strlen(char *str);
+char	*ft_strncat(char *dest, char *src, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dest, char *src, size_t n);
-int		ft_toupper(int c);
+int		ft_tolower(int c);
 int		ft_toupper(int c);
 // LibUTIL PROTOTYPES
 int		ft_isalnum(int c);
