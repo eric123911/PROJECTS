@@ -5,7 +5,7 @@ FILES	= $(shell find 	./LibMem \
 						./LibNumbers \
 						./LibPrint \
 						./LibStrings \
-						./LibUtil \
+						./LibUtils \
 -name "*.c")
 
 
