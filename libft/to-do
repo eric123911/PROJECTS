@@ -13,8 +13,8 @@
 [✓] strcpy
 [✓] strncpy
 [✓] strcat
-✓[?] strncat
-[?] strlcat
+[✓] strncat
+✓[?] strlcat
 [✓] strchr
 [✓] strrchr
 [] strstr
