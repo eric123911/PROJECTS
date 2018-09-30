@@ -2,10 +2,10 @@ NAME	= libft.a
 FLAGS = -Wall -Werror -Wextra
 CFLAGS	= $(FLAGS) -Iincludes -c
 FILES	= $(shell find 	./LibMem \
-						./LibNumbers \
-						./LibPrint \
-						./LibStrings \
-						./LibUtils \
+					./LibNumbers \
+					./LibPrint \
+					./LibStrings \
+					./LibUtils \
 -name "*.c")
 
 
@@ -33,7 +33,7 @@ fclean: clean
 re: fclean all
 
 test: re
-	gcc -o test $(FLAGS) -Iincludes main.c $(NAME)
+	gcc -o test -lbsd $(FLAGS) -Iincludes main.c $(NAME)
 	@echo -e "\033[32mMAIN TEST COMPILED\033[0m"
 	@echo -e "\n\n\n"
 
