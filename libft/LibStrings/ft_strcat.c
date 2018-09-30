@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/28 01:15:49 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/28 17:11:55 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/09/29 12:04:53 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,7 +14,7 @@
 char		*ft_strcat(char *dest, char *src)
 {
 	unsigned int	i;
-	unsigned int	j;
+	int				j;
 
 	i = 0;
 	j = -1;
