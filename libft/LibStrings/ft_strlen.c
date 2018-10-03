@@ -6,20 +6,20 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/20 14:58:33 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/28 17:16:24 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 16:55:58 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 int	ft_strlen(char *str)
 {
-  int	i;
+	int	i;
 
-  i = 0;
-  while (*str)
-  {
-    str++;
-    i++;
-  }
-  return (i);
+	i = 0;
+	while (*str)
+	{
+		str++;
+		i++;
+	}
+	return (i);
 }

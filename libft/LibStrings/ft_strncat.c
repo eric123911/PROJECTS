@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/28 16:46:56 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/29 12:09:32 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 16:56:13 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,7 +23,7 @@ char		*ft_strncat(char *dest, char *src, size_t n)
 	while (dest[i])
 		i++;
 	while (j < (int)n && src[++j])
-			dest[i + j] = src[j];
+		dest[i + j] = src[j];
 	dest[i + j] = '\0';
 	return (dest);
 }

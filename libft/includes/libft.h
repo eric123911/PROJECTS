@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 17:25:54 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/30 16:24:00 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 18:27:26 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,7 +14,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-// SYSTEM LIBRARIES
+/*
+** SYSTEM LIBRARIES
+*/
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
@@ -26,7 +28,9 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-// LibMEM PROTOTYPES
+/*
+  LibMEM PROTOTYPES
+*/
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -38,7 +42,7 @@ void	ft_swap(int *a, int *b);
 int		ft_atoi(char *str);
 void	ft_putnbr(int n);
 // LibPRINT PROTOTYPES
-void	ft_putchar(char c);
+void	ft_putchar(int c);
 void	ft_putendl(char const *s);
 void	ft_putstr(char *str);
 // LibSTRINGS PROTOYPES
@@ -47,6 +51,7 @@ char	*ft_strcat(char *dest, char *src);
 char	*ft_strchr(const char *s, int c);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcpy(char *dest, char *src);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strdup(const char *s);
 size_t	ft_strlcat(char *dest, char *src, size_t size);
 int		ft_strlen(char *str);
@@ -54,6 +59,7 @@ char	*ft_strncat(char *dest, char *src, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dest, char *src, size_t n);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strstr(const char *haystack, const char *needle);
 // LibUTIL PROTOTYPES
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);

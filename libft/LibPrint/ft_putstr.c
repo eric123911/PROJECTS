@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/20 14:48:05 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/28 17:25:08 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/03 17:02:23 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,5 +15,5 @@
 
 void	ft_putstr(char *str)
 {
-  write(1, str, ft_strlen(str));
+	write(1, str, ft_strlen(str));
 }

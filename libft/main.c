@@ -1,7 +1,7 @@
 #include "includes/libft.h"
-#include <stdlib.h>
-#include <bsd/string.h> //
+//#include <bsd/string.h> //
 #include <string.h>
+#include <stdio.h>
 
 #define _PS			sleep(1)
 #define _N			ft_putendl("")
@@ -74,6 +74,16 @@ int	main(int ac, char **av)
 	ft_putendl(ft_strchr("0123abc", '1'));
 	ft_putendl(ft_strrchr("0123ab3c", 'c'));
 
+	ft_putendl("==========================");
+	printf("%s\n", strstr("Bardhjsgfhjdsgfhjdsgf", ""));
+	printf("%s\n", ft_strstr("Bardhjsgfhjdsgfhjdsgf", ""));
+
+
+	ft_putendl("==========================");
+	printf("%s\n", strnstr("FooBa Bar Baz", "Bar", 9));
+	printf("%s\n", ft_strnstr("FooBa Bar Baz", "Bar", 9));
+
+	//write(1, ⌦, 1);
 	// Just to suppress [-Werror=unused-parameter]
 	av[0] = "";
 	return (0);

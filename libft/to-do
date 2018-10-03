@@ -17,8 +17,8 @@
 ✓[?] strlcat
 [✓] strchr
 [✓] strrchr
-[] strstr
-[] strnstr
+[✓] strstr
+[✓] strnstr
 [✓] strcmp
 [✓] strncmp
 [✓] atoi
