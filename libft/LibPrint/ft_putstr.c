@@ -5,15 +5,15 @@
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/20 14:48:05 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/03 17:02:23 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/04 13:30:42 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/04 13:31:44 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putstr(char const *s)
 {
-	write(1, str, ft_strlen(str));
+	write(1, s, ft_strlen(s));
 }

@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcpy.c                                      .::    .:/ .      .::   */
+/*   ft_atoi.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/26 19:48:47 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 15:26:14 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/09/20 15:57:43 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/04 17:46:32 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char *src)
+int	ft_atoi(char *str)
 {
-	int	i;
+	int				s;
+	unsigned int	nb;
 
-	i = 0;
-	while (src[i] != '\0') //(*src)
+	nb = 0;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	s = *str == '-' ? 1 : 0;
+	*str == '-' || *str == '+' ? str++ : 0;
+	while (*str >= '0' && *str <= '9')
 	{
-		dst[i] = src[i];//*dest++ = *src++;
-		i++;
+		nb = nb * 10 + *str - '0';
+		str++;
 	}
-	while (dst[i])
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	return (s ? -nb : nb);
 }

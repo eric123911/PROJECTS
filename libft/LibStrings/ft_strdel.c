@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcpy.c                                      .::    .:/ .      .::   */
+/*   ft_strdel.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/26 19:48:47 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 15:26:14 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/04 18:44:29 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/04 18:48:58 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char *src)
-{
-	int	i;
+#include "../includes/libft.h"
 
-	i = 0;
-	while (src[i] != '\0') //(*src)
-	{
-		dst[i] = src[i];//*dest++ = *src++;
-		i++;
-	}
-	while (dst[i])
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+void	ft_strdel(char **as)
+{
+	//char **to_del;
+
+	//to_del = as;
+	
+	free(*as);
+	as = NULL;
 }

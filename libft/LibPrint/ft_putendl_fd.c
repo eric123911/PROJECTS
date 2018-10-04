@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcpy.c                                      .::    .:/ .      .::   */
+/*   ft_putendl_fd.c                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/26 19:48:47 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 15:26:14 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/04 13:35:25 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/04 13:44:24 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char *src)
-{
-	int	i;
+#include "../includes/libft.h"
 
-	i = 0;
-	while (src[i] != '\0') //(*src)
-	{
-		dst[i] = src[i];//*dest++ = *src++;
-		i++;
-	}
-	while (dst[i])
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+void	ft_putendl_fd(char const *s, int fd)
+{
+	ft_putstr_fd((char *)s, fd);
+	ft_putchar_fd('\n', fd);
 }

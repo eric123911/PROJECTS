@@ -18,7 +18,7 @@ int	main(int ac, char **av)
 	ft_putstr(" ."), _PS,
 		ft_putstr(" ."), _PS,
 		ft_putendl(" .\033[0m"), _PS;
-	ft_putnbr(ft_atoi("    -42   #@'è_ç")), _N;
+	ft_putnbr(ft_atoi(av[2])), _N;
 	ft_putendl("Hello world !");
 	ft_putendl("==========================");
 	ft_putstr(av[1]), ft_putstr(" isalnum: "), ft_putnbr(ft_isalnum(_AV_ATOI)), _N;
@@ -53,10 +53,10 @@ int	main(int ac, char **av)
 	ft_putnbr(ft_memcmp("azb", "aa", 2*sizeof(char))), _N;
 
 	ft_putendl("==========================");
-	char s5[50] = "ok.", s6[2];
+	char *s5 = "abc\0\0\0\0", s6[6];
 	// devrait afficher 2 fois "ok.\n"
-	ft_strcpy(s6, s5), ft_putendl(s6);
-	ft_strncpy(s6, s5, 4), ft_putendl(s6);
+	ft_strcpy(s6, s5), ft_putstr("ft_strcpy: "), ft_putendl(s6);
+	//ft_strncpy(s6, s5, 4), ft_putendl(s6);
 
 	ft_putendl("==========================");
 	char s7[3] = "ab", s8[6] = "cdef";
@@ -71,18 +71,19 @@ int	main(int ac, char **av)
 	ft_putnbr(strlcat(s13, s14, value)), _N;
 
 	ft_putendl("==========================");
-	ft_putendl(ft_strchr("0123abc", '1'));
-	ft_putendl(ft_strrchr("0123ab3c", 'c'));
+	printf("strchr: %s\n", strchr("\0", (char)""));
+	printf("ft_strchr: %s\n", ft_strrchr("\0", (char)""));
 
 	ft_putendl("==========================");
-	printf("%s\n", strstr("Bardhjsgfhjdsgfhjdsgf", ""));
-	printf("%s\n", ft_strstr("Bardhjsgfhjdsgfhjdsgf", ""));
+	printf("%s\n", strstr("", "iasdas"));
+	printf("%s\n", ft_strstr("", "dsfdsf"));
 
 
 	ft_putendl("==========================");
 	printf("%s\n", strnstr("FooBa Bar Baz", "Bar", 9));
 	printf("%s\n", ft_strnstr("FooBa Bar Baz", "Bar", 9));
 
+	printf("\n\nft_itoa: %s", ft_itoa(-1234));
 	//write(1, ⌦, 1);
 	// Just to suppress [-Werror=unused-parameter]
 	av[0] = "";

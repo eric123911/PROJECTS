@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 17:25:54 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/03 18:27:26 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 18:46:53 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -31,30 +31,37 @@ typedef struct		s_list
 /*
   LibMEM PROTOTYPES
 */
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	*ft_memmove(void *dest, const void *src, size_t n);
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_swap(int *a, int *b);
-// LibNUMBERS PROTOTYPES
+// LibMATH PROTOTYPES
 int		ft_atoi(char *str);
-void	ft_putnbr(int n);
+char	*ft_itoa(int n);
 // LibPRINT PROTOTYPES
-void	ft_putchar(int c);
+void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
 void	ft_putendl(char const *s);
-void	ft_putstr(char *str);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr(char const *s);
+void	ft_putstr_fd(char const *s, int fd);
 // LibSTRINGS PROTOYPES
 void	ft_bzero(void *s, size_t n);
 char	*ft_strcat(char *dest, char *src);
 char	*ft_strchr(const char *s, int c);
+void	ft_strclr(char *s);
 int		ft_strcmp(const char *s1, const char *s2);
-char	*ft_strcpy(char *dest, char *src);
+char	*ft_strcpy(char *dst, const char *src);
+void	ft_strdel(char **as);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strdup(const char *s);
-size_t	ft_strlcat(char *dest, char *src, size_t size);
-int		ft_strlen(char *str);
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size);
+int		ft_strlen(const char *str);
 char	*ft_strncat(char *dest, char *src, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dest, char *src, size_t n);

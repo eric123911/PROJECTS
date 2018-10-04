@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strlcat.c                                     .::    .:/ .      .::   */
+/*   ft_strcat.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/29 12:46:41 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/30 13:59:26 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/09/28 01:15:49 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/04 16:21:07 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-size_t		ft_strlcat(char *dest, char *src, size_t size)
+size_t		ft_strlcat(char *restrict dst,
+						const char *restrict src, size_t size)
 {
 	unsigned int	i;
 	int				j;
 
 	i = 0;
-	j = 0;
-	while (dest[i])
+	j = -1;
+	while (dst[i])
 		i++;
-	while (src[j])
-	{
-		if (i < (unsigned int)size - 1)
-			dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i - 1] = '\0';
-	dest = ft_strcat(dest, src);
-	return (ft_strlen(src));
+	while (j < (int)size && src[++j])
+		dst[i + j] = src[j];
+	dst[i + j] = src[j];
+	return (ft_strlen(dst));
 }

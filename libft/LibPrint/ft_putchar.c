@@ -6,14 +6,14 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/20 14:49:28 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/03 17:46:56 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/04 13:09:51 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_putchar(int c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }

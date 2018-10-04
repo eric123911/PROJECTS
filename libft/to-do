@@ -35,7 +35,7 @@
 [] ft_memdel
 [] ft_strnew
 [] ft_strdel
-[] ft_strclr
+✓[] ft_strclr
 [] ft_striter
 [] ft_striteri
 [] ft_strmap
@@ -51,7 +51,7 @@
 [✓] ft_putstr
 [✓] ft_putendl
 [✓] ft_putnbr
-[] ft_putchar_fd
-[] ft_putstr_fd
-[] ft_putendl_fd
-[] ft_putnbr_fd
+[✓] ft_putchar_fd
+[✓] ft_putstr_fd
+[✓] ft_putendl_fd
+[✓] ft_putnbr_fd

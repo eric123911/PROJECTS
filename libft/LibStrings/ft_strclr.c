@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strcpy.c                                      .::    .:/ .      .::   */
+/*   ft_strclr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/26 19:48:47 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 15:26:14 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/04 13:51:26 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/04 18:43:13 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char *src)
+void	ft_strclr(char *s)
 {
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0') //(*src)
+	while (*s)
 	{
-		dst[i] = src[i];//*dest++ = *src++;
-		i++;
+		*s = '\0';
+		s++;
 	}
-	while (dst[i])
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
 }
