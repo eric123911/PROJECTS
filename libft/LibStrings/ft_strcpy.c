@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/26 19:48:47 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 15:26:14 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/06 00:52:43 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,16 +15,9 @@ char	*ft_strcpy(char *dst, const char *src)
 {
 	int	i;
 
-	i = 0;
-	while (src[i] != '\0') //(*src)
-	{
-		dst[i] = src[i];//*dest++ = *src++;
-		i++;
-	}
-	while (dst[i])
-	{
-		dst[i] = '\0';
-		i++;
-	}
+	i = -1;
+	while (src[++i])
+		dst[i] = src[i];
+	dst[i] = '\0';
 	return (dst);
 }

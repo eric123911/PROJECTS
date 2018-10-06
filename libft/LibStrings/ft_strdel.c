@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/04 18:44:29 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 18:48:58 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/05 23:22:41 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,10 +15,9 @@
 
 void	ft_strdel(char **as)
 {
-	//char **to_del;
-
-	//to_del = as;
-	
-	free(*as);
-	as = NULL;
+	if (as && *as)
+	{
+		free(*as);
+		*as = NULL;
+	}
 }

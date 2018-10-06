@@ -6,16 +6,15 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/04 13:51:26 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 18:43:13 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/05 23:20:15 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
+#include "../includes/libft.h"
+
 void	ft_strclr(char *s)
 {
-	while (*s)
-	{
-		*s = '\0';
-		s++;
-	}
+	if (s)
+		ft_bzero(s, ft_strlen(s));
 }

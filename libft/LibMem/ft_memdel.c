@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_atoi.c                                        .::    .:/ .      .::   */
+/*   ft_memdel.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/20 15:57:43 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 04:40:56 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/06 01:17:44 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/06 01:21:39 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_memdel(void **ap)
 {
-	int				s;
-	unsigned int	nb;
-
-	nb = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		str++;
-	s = *str == '-' ? 1 : 0;
-	*str == '-' || *str == '+' ? str++ : 0;
-	while (ft_isdigit(*str))
+	if (ap && *ap)
 	{
-		nb = nb * 10 + *str - '0';
-		str++;
+		free(*ap);
+		*ap = 0;
 	}
-//	if (nb > 2147483649 || (s == 1 && nb > 2147483647))
-//		return (-1);
-	return (s ? -nb : nb);
 }

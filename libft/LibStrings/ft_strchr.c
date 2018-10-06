@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/30 14:35:47 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 16:26:01 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/05 23:44:52 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,9 +24,9 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (*c_ptr == ind)
 			return ((void *)c_ptr);
-		//else if (*c_ptr == '\0')
-		//	return ((void *)c_ptr);
 		c_ptr++;
 	}
-	return (0);
+	if (*c_ptr == ind)
+		return ((void *)c_ptr);
+	return (NULL);
 }

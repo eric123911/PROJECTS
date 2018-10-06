@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/28 01:15:49 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 16:21:07 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/05 23:42:02 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,15 +16,26 @@
 size_t		ft_strlcat(char *restrict dst,
 						const char *restrict src, size_t size)
 {
-	unsigned int	i;
-	int				j;
+	char		*d_ptr;
+	char		*s;
+	size_t		i;
+	size_t		dlen;
 
-	i = 0;
-	j = -1;
-	while (dst[i])
-		i++;
-	while (j < (int)size && src[++j])
-		dst[i + j] = src[j];
-	dst[i + j] = src[j];
-	return (ft_strlen(dst));
+	d_ptr = dst;
+	s = (char *)src;
+	i = size;
+	while (i-- != 0 && *d_ptr)
+		d_ptr++;
+	dlen = d_ptr - dst;
+	i = size - dlen;
+	if (i == 0)
+		return (dlen +ft_strlen(s));
+	while (*s)
+	{
+		if (i-- != 1)
+			*d_ptr++ = *s;
+		s++;
+	}
+	*d_ptr = '\0';
+	return (s + dlen - src);
 }

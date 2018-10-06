@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_atoi.c                                        .::    .:/ .      .::   */
+/*   ft_strmap.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/20 15:57:43 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 04:40:56 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/06 02:00:35 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/06 02:18:23 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	int				s;
-	unsigned int	nb;
+	char	*s_ptr;
+	size_t	i;
 
-	nb = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		str++;
-	s = *str == '-' ? 1 : 0;
-	*str == '-' || *str == '+' ? str++ : 0;
-	while (ft_isdigit(*str))
+	if (s && f)
 	{
-		nb = nb * 10 + *str - '0';
-		str++;
+		i = -1;
+		if (NULL == (s_ptr = ft_strdup((const char *)s)))
+			return (NULL);
+		while (s[++i])
+			s_ptr[i] = f(s_ptr[i]);
 	}
-//	if (nb > 2147483649 || (s == 1 && nb > 2147483647))
-//		return (-1);
-	return (s ? -nb : nb);
+	return (s_ptr);
 }

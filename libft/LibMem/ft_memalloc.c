@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_atoi.c                                        .::    .:/ .      .::   */
+/*   ft_memalloc.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/09/20 15:57:43 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 04:40:56 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/06 00:23:13 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/06 02:44:28 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_atoi(const char *str)
+void	*ft_memalloc(size_t s)
 {
-	int				s;
-	unsigned int	nb;
+	void	*s_ptr;
 
-	nb = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		str++;
-	s = *str == '-' ? 1 : 0;
-	*str == '-' || *str == '+' ? str++ : 0;
-	while (ft_isdigit(*str))
-	{
-		nb = nb * 10 + *str - '0';
-		str++;
-	}
-//	if (nb > 2147483649 || (s == 1 && nb > 2147483647))
-//		return (-1);
-	return (s ? -nb : nb);
+	if (NULL == (s_ptr = (void *)malloc(sizeof(void *) * s)))
+		return (NULL);
+	ft_bzero(s_ptr, s);
+	return (s_ptr);
 }

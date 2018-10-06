@@ -6,12 +6,12 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/28 01:15:49 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 18:41:56 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/06 03:16:46 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-char		*ft_strcat(char *dest, char *src)
+char		*ft_strcat(char *dest, const char *src)
 {
 	unsigned int	i;
 	int				j;

@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/20 14:49:28 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/04 13:09:51 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/06 00:12:48 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,5 +15,5 @@
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	write(1, (unsigned char *)&c, sizeof(c));
 }

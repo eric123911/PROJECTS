@@ -39,3 +39,4 @@
 *DS_Store
 *.nfs
 *test*
+./libft-unit-test
