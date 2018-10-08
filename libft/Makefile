@@ -1,40 +1,31 @@
 NAME	= libft.a
-FLAGS = -Wall -Werror -Wextra
+DNAME	= libft.so
+FLAGS	= -Wall -Werror -Wextra
 CFLAGS	= $(FLAGS) -Iincludes -c
-FILES	= $(shell find 	./LibMath \
-						./LibMem \
-						./LibPrint \
-						./LibStrings \
-						./LibUtils \
--name "*.c")
+FILES	= $(shell find ./ -name "*.c")
+OBJ		= $(FILES:.c=.o)
 
 
-all: build $(NAME)
+all: $(NAME)
 
 # This won't run if the .o files don't exist or are not modified
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(shell find ./build -name "*.o")
+	ar rcs $(NAME) $(OBJ)											#Dynamic libmy.so
 	ranlib $(NAME)
-	@echo "\033[32mLIBFT COMPILED ✓\033[0m"
+	gcc -shared -fPIC -Wl,-soname,$(DNAME) -o $(DNAME) $(OBJ) -lc	#Static libmy.a
+	@echo -e "\033[32mLIBFT COMPILED ✓\033[0m"
 
-build:
-	mkdir -p build
+$(OBJ):
 	gcc $(CFLAGS) $(FILES)
-	mv *.o ./build/
 
 clean:
-	rm -rf ./build
-	@echo "\033[31mbuild folder deleted\033[0m"
+	rm -f $(OBJ)
+	@echo -e "\033[31mobject files deleted\033[0m"
 
 fclean: clean
-	rm -f $(NAME) test
-	@echo "\033[31m$(NAME) deleted\033[0m"
+	rm -f $(NAME) $(DNAME)
+	@echo -e "\033[31m$(NAME) && $(DNAME) deleted\033[0m"
 
 re: fclean all
-
-test: re
-	gcc -o test $(FLAGS) -Iincludes main.c $(NAME)
-	@echo "\033[32mMAIN TEST COMPILED\033[0m"
-	@echo "\n\n\n"
 
 .PHONY: clean fclean all re
