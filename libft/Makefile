@@ -10,21 +10,23 @@ all: $(NAME)
 
 # This won't run if the .o files don't exist or are not modified
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)											#Dynamic libmy.so
+	ar rcs $(NAME) $(OBJ)
+	@echo \# Dynamic libft.so
 	ranlib $(NAME)
-	gcc -shared -fPIC -Wl,-soname,$(DNAME) -o $(DNAME) $(OBJ) -lc	#Static libmy.a
-	@echo -e "\033[32mLIBFT COMPILED ✓\033[0m"
+	gcc -shared -fPIC -Wl,-soname,$(DNAME) -o $(DNAME) $(OBJ) -lc
+	@echo \# Static libft.a
+	@echo -e "\033[32m[✓] LIBFT COMPILED\033[0m"
 
 $(OBJ):
 	gcc $(CFLAGS) $(FILES)
 
 clean:
 	rm -f $(OBJ)
-	@echo -e "\033[31mobject files deleted\033[0m"
+	@echo -e "\033[31m[✘] object files deleted\033[0m"
 
 fclean: clean
 	rm -f $(NAME) $(DNAME)
-	@echo -e "\033[31m$(NAME) && $(DNAME) deleted\033[0m"
+	@echo -e "\033[31m[✘] $(NAME) && $(DNAME) deleted\033[0m"
 
 re: fclean all
 
