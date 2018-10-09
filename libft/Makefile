@@ -11,11 +11,13 @@ all: $(NAME)
 # This won't run if the .o files don't exist or are not modified
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
-	@echo \# Dynamic libft.so
 	ranlib $(NAME)
-	gcc -shared -fPIC -Wl,-soname,$(DNAME) -o $(DNAME) $(OBJ) -lc
 	@echo \# Static libft.a
 	@echo -e "\033[32m[✓] LIBFT COMPILED\033[0m"
+
+so:
+	gcc -shared -fPIC -Wl,-soname,$(DNAME) -o $(DNAME) $(OBJ) -lc
+	@echo \# Dynamic libft.so
 
 $(OBJ):
 	gcc $(CFLAGS) $(FILES)
