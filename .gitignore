@@ -39,4 +39,5 @@
 *DS_Store
 *.nfs
 *test*
+vgcore*
 ./libft-unit-test
