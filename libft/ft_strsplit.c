@@ -6,12 +6,36 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 03:34:14 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 03:45:56 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 13:28:48 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+
+static int	ft_countw(char *s, char c)
+{
+	//char 	*str;
+	int				i;
+	int				j;
+	unsigned int	nb;
+
+	i= -1;
+	nb = 0;
+	while (s[++i])
+	{
+		if (s[i] != c)
+		{
+			j = 0;
+			while (s[i + j] && s[i + j] != c)
+				j++;
+			i +=j;
+			nb++;
+		}
+	}
+	return (nb + 1);
+}
 
 char	**ft_strsplit(char const *s, char c)
 {
@@ -22,8 +46,9 @@ char	**ft_strsplit(char const *s, char c)
 
 	if (!s || !c)
 		return (0);
-	if (NULL == (s_ptr = ft_memalloc(ft_strlen(s) + 1)))
+	if (NULL == (s_ptr = ft_memalloc(sizeof(char *) * ft_countw((char *)s, c))))
 		return (NULL);
+//	printf("%i\n", ft_countw((char *)s, c));
 	i = -1;
 	j = 0;
 	while (s[++i])
@@ -37,6 +62,22 @@ char	**ft_strsplit(char const *s, char c)
 			i += len;
 		}
 	}
+//	printf("%d", j);
 	s_ptr[j] = 0;
 	return (s_ptr);
 }
+
+/*
+int		main(int ac, char **av)
+{
+	char	**tab;
+	int i = 0;
+
+	if (ac == 3)
+	{
+		tab = ft_strsplit(av[1], av[2][0]);
+		while (tab[i])
+			printf("%s\n", tab[i++]);
+	}
+}
+*/
