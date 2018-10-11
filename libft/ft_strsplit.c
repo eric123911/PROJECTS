@@ -6,13 +6,12 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/06 03:34:14 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/11 13:36:57 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 13:57:27 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_countw(char *s, char c)
 {
@@ -66,8 +65,7 @@ char	**ft_strsplit(char const *s, char c)
 	s_ptr[j] = NULL;
 	return (s_ptr);
 }
-
-
+/*
 int		main(int ac, char **av)
 {
 	int i = 0;
@@ -80,3 +78,4 @@ int		main(int ac, char **av)
 			printf("%s\n", tab[i++]);
 	}
 }
+*/

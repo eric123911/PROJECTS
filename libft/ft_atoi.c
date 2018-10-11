@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/20 15:57:43 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 04:40:56 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/11 13:57:41 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,8 +15,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int				s;
-	unsigned int	nb;
+	int					s;
+	unsigned long int	nb;
 
 	nb = 0;
 	while ((*str >= 9 && *str <= 13) || *str == 32)
@@ -28,7 +28,20 @@ int	ft_atoi(const char *str)
 		nb = nb * 10 + *str - '0';
 		str++;
 	}
-//	if (nb > 2147483649 || (s == 1 && nb > 2147483647))
-//		return (-1);
+	if (nb > 9223372036854775807)
+	{
+		if (s == 0)
+			return (-1);
+		else if (s == 1)
+			return (0);
+	}
 	return (s ? -nb : nb);
 }
+/*
+int		main(int ac, char **av)
+{
+	if (ac == 2)
+			printf("REAL: %i\nME: %i\n", atoi(av[1]), ft_atoi(av[1]));
+		return (0);
+}
+*/
