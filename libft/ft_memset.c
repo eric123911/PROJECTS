@@ -6,19 +6,19 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 17:23:14 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/09/28 17:22:27 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 18:31:45 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t n)
 {
-	char	*t;
+	char	*a;
 
-	t = s;
+	a = b;
 	while (n-- > 0)
-		*t++ = c;
-	return (s);
+		*a++ = c;
+	return (b);
 }

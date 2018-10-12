@@ -6,17 +6,19 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/20 14:58:33 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 03:30:11 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/10 12:56:46 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
-	i = -1;
-	while (str[++i])
-		;
+	i = 0;
+	while (s[i])
+		i++;
 	return (i);
 }

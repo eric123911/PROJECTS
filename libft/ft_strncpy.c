@@ -6,20 +6,21 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/26 20:52:05 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/06 01:16:52 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/09 18:56:47 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+char	*ft_strncpy(char *dest, const char *src, size_t len)
 {
 	char	*tmp;
-	if (!n)
+
+	if (!len)
 		return (dest);
 	tmp = dest;
-	while (n--)
+	while (len--)
 		if (*src)
 			*dest++ = *src++;
 		else
