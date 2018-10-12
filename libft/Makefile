@@ -2,7 +2,7 @@ NAME	= libft.a
 DNAME	= libft.so
 FLAGS	= -Wall -Werror -Wextra
 CFLAGS	= $(FLAGS) -Iincludes -c
-FILES	= $(shell find ./ -name "*.c")
+FILES	= $(shell find . -name "*.c")
 OBJ		= $(FILES:.c=.o)
 
 
