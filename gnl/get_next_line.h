@@ -6,14 +6,14 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/13 02:07:31 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/13 02:53:01 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/13 03:09:11 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# define BUFF_SIZE 1
+# define BUFF_SIZE 666666
 # include "./libft/libft.h"
 
 typedef struct		s_line

@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/13 01:44:11 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/13 02:14:15 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/13 03:03:11 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,7 +14,7 @@
 #include "libft.h"
 
 char	*ft_strcjoin(char const *s1, char const *s2, int c)
-{ésdzadaz
+{
 	size_t	i;
 	char	*str;
 
