@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/13 01:41:17 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/13 02:53:14 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/13 17:06:44 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -80,9 +80,8 @@ int		get_next_line(const int fd, char **line)
 	long			i;
 
 	i = 0;
-	if (!line || /*!*line ||*/ BUFF_SIZE < 1 || fd < 0 || read(fd, 0, 0)
-		|| !(*line = ft_strnew(0))
-		|| !(list = ft_initlist(list, fd)))
+	if (!line || !*line || BUFF_SIZE < 1 || fd < 0 || read(fd, 0, 0) ||
+		!(*line = ft_strnew(0)) || !(list = ft_initlist(list, fd)))
 		return (-1);
 	if (list->stock && ft_checkbuf(list->stock, list, line))
 		return (1);
@@ -116,4 +115,3 @@ int	main(int ac, char **av)
 	close(fd);
 	return 0;
 }
-
