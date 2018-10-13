@@ -36,6 +36,7 @@
 *.dSYM/
 *.su
 
+# Repo files
 *DS_Store
 *.nfs
 *test*

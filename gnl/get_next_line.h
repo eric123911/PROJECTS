@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strclen.c                                     .::    .:/ .      .::   */
+/*   get_next_line.h                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/12 15:33:25 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 15:38:08 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/13 02:07:31 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/13 02:53:01 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# define BUFF_SIZE 1
+# include "./libft/libft.h"
 
-size_t	ft_strclen(char const *s, int c)
+typedef struct		s_line
 {
-	unsigned int	i;
+	int				fd;
+	char			*stock;
+	struct s_line	*next;
+}					t_line;
 
-	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	return (i);
-}
+int	get_next_line(const int fd, char **line);
+
+#endif

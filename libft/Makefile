@@ -12,23 +12,23 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 	ranlib $(NAME)
-	@echo \# Static libft.a
-	@echo "\033[32m[✓] LIBFT COMPILED\033[0m"
+	@echo -e \# Static libft.a
+	@echo -e "\033[32m[✓] LIBFT COMPILED\033[0m"
 
 so:
 	gcc -shared -fPIC -Wl,-soname,$(DNAME) -o $(DNAME) $(OBJ) -lc
-	@echo \# Dynamic libft.so
+	@echo -e \# Dynamic libft.so
 
 $(OBJ):
 	gcc $(CFLAGS) $(FILES)
 
 clean:
 	rm -f *.o
-	@echo "\033[31m[✘] object files deleted\033[0m"
+	@echo -e "\033[31m[✘] object files deleted\033[0m"
 
 fclean: clean
 	rm -f $(NAME) $(DNAME)
-	@echo "\033[31m[✘] $(NAME) && $(DNAME) deleted\033[0m"
+	@echo -e "\033[31m[✘] $(NAME) && $(DNAME) deleted\033[0m"
 
 re: fclean all
 

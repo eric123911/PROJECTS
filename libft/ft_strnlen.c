@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_bcopy.c                                       .::    .:/ .      .::   */
+/*   ft_strclen.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/12 17:42:45 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 17:55:46 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/12 15:33:25 by eschnell     #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/13 01:42:14 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bcopy(const void *src, void *dst, size_t len)
+size_t	ft_strnlen(char const *s, int c)
 {
 	unsigned int	i;
 
-	if (!src || !dst)
-		return ;
 	i = 0;
-	while (len > 0)
-	{
-		*((u_int8_t *)dst + i) = *((u_int8_t *)src + i);
+	while (s[i] && s[i] != c)
 		i++;
-		len--;
-	}
+	return (i);
 }

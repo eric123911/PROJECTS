@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 17:25:54 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/12 19:03:49 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/13 01:41:58 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -70,8 +70,9 @@ void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr(char const *s);
 void			ft_putstr_fd(char const *s, int fd);
 char			*ft_strcat(char *dest, const char *src);
+char			*ft_strccat(char *dest, const char *src, int c);
 char			*ft_strchr(const char *s, int c);
-size_t			ft_strclen(const char *s, int c);
+char			*ft_strcjoin(char const *s1, char const *s2, int c);
 void			ft_strclr(char *s);
 int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strcpy(char *dst, const char *src);
@@ -91,6 +92,7 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strncpy(char *dest, const char *src, size_t len);
 int				ft_strnequ(char const *s1, char const *s2, size_t n);
 char			*ft_strnew(size_t size);
+size_t			ft_strnlen(const char *s, int c);
 char			*ft_strnstr(const char *haystack,
 							const char *needle, size_t len);
 char			*ft_strpbrk(const char *s, const char *charset);
