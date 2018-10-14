@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 10:51:53 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/03 17:02:39 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/14 18:44:47 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,6 +15,5 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr((char *)s);
-	ft_putchar('\n');
+	ft_putendl_fd(s, 1);
 }
