@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/20 17:12:33 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/14 18:43:22 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 14:22:03 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,5 +15,5 @@
 
 void	ft_putnbr(int n)
 {
-	ft_putnbr_fd(int n, 1);
+	ft_putnbr_fd(, 1);
 }
