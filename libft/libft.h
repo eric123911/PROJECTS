@@ -6,7 +6,7 @@
 /*   By: eschnell <eschnell@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 17:25:54 by eschnell     #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/13 01:41:58 by eschnell    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/15 14:23:54 by eschnell    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -43,6 +43,7 @@ int				ft_islessequal(float x, float y);
 int				ft_islower(int c);
 int				ft_isprint(int c);
 int				ft_ispunct(int c);
+int				ft_isspace(int c);
 int				ft_isupper(int c);
 int				ft_isxdigit(int c);
 char			*ft_itoa(int n);
