@@ -21,10 +21,10 @@ char		*ft_strtrim(char const *s)
 	if (!s)
 		return (0);
 	i = 0;
-	while (ft_isblank(s[i]) || s[i] == '\n')
+	while (ft_isspace(s[i]))
 		i++;
 	len = ft_strlen(s) - 1;
-	while (len > i && (ft_isblank(s[len]) || s[len] == '\n'))
+	while (len > i && ft_isspace(s[len]))
 		len--;
 	if (len < i)
 		return (ft_strdup(""));

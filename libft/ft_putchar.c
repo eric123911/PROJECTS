@@ -15,5 +15,5 @@
 
 void	ft_putchar(char c)
 {
-	write(1, (unsigned char *)&c, sizeof(c));
+	ft_putchar_fd(c, 1);
 }

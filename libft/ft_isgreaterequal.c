@@ -13,7 +13,5 @@
 
 int	ft_isgreaterequal(float x, float y)
 {
-	if (x >= y)
-		return (1);
-	return (0);
+	return (x >= y);
 }
